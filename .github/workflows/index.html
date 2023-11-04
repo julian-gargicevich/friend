@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting</title>
+</head>
+<body>
+
+    <!-- Add your JavaScript code within the script tag -->
+    <script>
+      const currentURL = window.location.href;
+
+        // Extract the request ID from the URL (assuming it's the last part of the path)
+        const parts = currentURL.split('/');
+        const requestId = parts[parts.length - 1];
+
+        // Build the new URL with the extracted request ID
+        const newURL = `example://friends/${requestId}`;
+
+        // Redirect to the new URL
+        window.location.replace(newURL);
+    </script>
+</body>
+</html>
