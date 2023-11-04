@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting</title>
+</head>
+<body>
+
+    <!-- Add your JavaScript code within the script tag -->
+    <script>
+      const currentURL = window.location.href;
+
+        // Create a URLSearchParams object to parse the query parameters
+        const urlParams = new URLSearchParams(currentURL);
+
+        // Get the value of the 'requestId' query parameter
+        const requestId = urlParams.get('requestId');
+
+        // Check if 'requestId' is not null or undefined
+        if (requestId !== null) {
+            // Build the new URL with the extracted request ID
+            const newURL = `example://friends/${requestId}`;
+
+            // Redirect to the new URL
+            window.location.replace(newURL);
+        }
+    </script>
+</body>
+</html>
