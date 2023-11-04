@@ -17,7 +17,7 @@
         // Check if 'requestId' is not null or undefined
         if (requestId !== null) {
             // Build the new URL with the extracted request ID
-            const newURL = `liteup-getgains://friends/${requestId}`;
+            const newURL = `liteup-getgains://friends?requestId=${requestId}`;
 
             // Redirect to the new URL
             window.location.replace(newURL);
